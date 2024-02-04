@@ -20,7 +20,7 @@ services:
       - zipkin-all-in-one
 
   prometheus:
-    container_name: prometheus
+    container_name: prometheus-all
     image: prom/prometheus
     restart: always
     command:
@@ -46,7 +46,7 @@ services:
       - "4317"  # otlp grpc
 
   grafana:
-    container_name: grafana
+    container_name: grafana-all
     image: grafana/grafana
     volumes:
       - ./docker/grafana/grafana-datasources.yml:/etc/grafana/provisioning/datasources/datasources.yml
