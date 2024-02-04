@@ -15,12 +15,16 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
+import com.microsoft.applicationinsights.attach.ApplicationInsights;
+
 import java.util.concurrent.TimeUnit;
 
 @SpringBootApplication
 public class HelloServiceApplication {
 
 	public static void main(String[] args) {
+		    ApplicationInsights.attach();
+
 		SpringApplication.run(HelloServiceApplication.class, args);
 	}
 

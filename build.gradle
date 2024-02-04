@@ -41,6 +41,11 @@ dependencies {
 	// https://mvnrepository.com/artifact/io.opentelemetry.instrumentation/opentelemetry-logback-appender-1.0
   //  runtimeOnly group: 'io.opentelemetry.instrumentation', name: 'opentelemetry-logback-appender-1.0', version: '1.32.1-alpha'
 
+  // https://mvnrepository.com/artifact/com.microsoft.azure/applicationinsights-core
+	implementation group: 'com.microsoft.azure', name: 'applicationinsights-core', version: '3.4.19'
+	implementation group: 'com.microsoft.azure', name: 'applicationinsights-runtime-attach', version: '3.4.19'
+
+
 
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
